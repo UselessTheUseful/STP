@@ -27,8 +27,9 @@ Password= **********
 First_Name= Rami
 Last_Name= Nissinen
 Email= **********
-Invalid_Password_Short= xxx
+Invalid_Password_Short= 1234567
 Invalid_Password_Common_Word= Password
+Invalid_Username= user name
 New_Username= **********
 New_Email= **********
 Empty= 
@@ -82,6 +83,16 @@ Register With A Common Word Password
 	- Input Username
 	- Input Email
 	- Input Invalid_Password_Common_Word
+	- Submit Registration Form
+	- Verify Error Message Shows Password Cannot Be A Common Word Or Phrase
+
+Register With Invalid Username
+	- Navigate To Registration Page
+	- Input First_Name
+	- Input Last_Name
+	- Input Invalid_Username
+	- Input Email
+	- Input Password
 	- Submit Registration Form
 	- Verify Error Message Shows Password Cannot Be A Common Word Or Phrase
 
