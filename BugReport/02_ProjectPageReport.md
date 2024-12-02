@@ -18,11 +18,11 @@
      
 ## Relevant logs and/or screenshots
 
-    ![Image info](../Image/Bug_Screenshot.png)
+![Image info](../Image/Bug_Screenshot.png)
 
 ## Possible fixes
 
-    ![Block of Code most likely responsible](../Image/image.png)
+![Block of Code most likely responsible](../Image/image.png)
 
 ## Whom do you report/ Assign To/ Tags
 
