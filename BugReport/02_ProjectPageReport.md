@@ -22,6 +22,7 @@
 
 ## Possible fixes
 
+    In the html file of the page the h3 tag's text is most likely responsible
 ![Block of Code most likely responsible](../Image/image.png)
 
 ## Whom do you report/ Assign To/ Tags
