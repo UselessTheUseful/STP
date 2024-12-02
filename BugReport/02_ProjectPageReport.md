@@ -28,7 +28,9 @@
 ## Whom do you report/ Assign To/ Tags
 
     /Label ~bug ~reproduced ~spelling_error
+    /cc @project-manager
+    /assing @dev
 
 ## Priority
 
-    Major. The Spelling mistake completeley changes the meaning of the title from what is intended. A severe spelling mistake in such an obvious place hurts credibility with customers.
+    Minor
