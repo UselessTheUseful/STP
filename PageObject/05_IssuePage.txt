@@ -5,10 +5,11 @@
 Documentation	Issue Test scenario. CRUD Operation: Create, Read, Update, Delete
 
 # TODO: Write Precondition and Postcondition, Tags 
+Tips: Project must be created by the user before 
 
-Pre Condition	Tips: Project must be created by the user before 
-Post Condition	
-Tags
+Pre Condition	Open Browser, Existing Project Created By User, Existing GitLab User Account
+Post Condition	Close Browsers
+Tags	Issues
 
 #******************* Common Variables ********************
 
@@ -19,7 +20,8 @@ Tags
 
 # TODO: Write Issue creation field variables, Updated name of the issue
 
-
+Issue_Title= Title
+Updated_Title= New_Title
 
 #******************** Test Cases *************************
 
@@ -33,3 +35,36 @@ Tags
  	Update name of issue, 
 	Create second issue with privious updated name
     Delete first issue
+
+Creation Issue
+	- Navigate To Accounts Issues Page
+	- Select A Project From Drop Down Menu
+	- Click New Issue In Selected Project
+	- Input Title Issue_Title
+	- Click Create Issue
+	- Verify Issue Was Created
+
+Update Created Issue
+	- Navigae To Accounts Issues Page
+	- Open Created Issue
+	- Click Edit
+	- Input Title Updated_Title
+	- click Save Changes
+	- Verify Title Of Issue Changed
+
+Create Second Issue With Previous Updated Name
+	- Navigate To Accounts Issues Page
+	- Select A Project From Drop Down Menu
+	- Click New Issue In Selected Project
+	- Input Title Updated_Title
+	- Click Create Issue
+	- Verify There Are Now 2 Issues With Name Updated_Title
+
+Delete First Issue
+	- Navigate To Accounts Issues Page
+	- Open First Created Issue
+	- Click The Three Dots Next To Edit
+	- Select Delete Issue
+	- Click Delete Issue
+	- Verify Message Informing Issue Was Deleted
+	- Verify Issue No Longer Exists

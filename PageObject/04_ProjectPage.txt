@@ -5,13 +5,13 @@
 
 # TODO: Write Dcocumentation e.g. Project Test scenario. CRUD Operation: Create, Read, Update, Delete
 
-Documentation	
+Documentation	Testing creation, ceading, cpdating and deleting of projects
 
 # TODO: Write Precondition, Postcondition, Tags
 
-Pre Condition	 
-Post Condition	
-Tags
+Pre Condition	Open Browser, Existing GitLab User Account
+Post Condition	Close All Browsers
+Tags	Projects
 
 #******************* Common Variables ********************
 
@@ -21,7 +21,10 @@ Tags
 
 # TODO: Write Project creation field variables
 
-
+Project_Name= New_Project
+Updated_Name= Updated_Name
+Invalid_Slug= invalid slug
+Incorrect_Confirmation = incorrect
 
 #******************** Test Cases *************************
 
@@ -37,8 +40,91 @@ Tags
 	Delete template project
 	Valide that message is showing Project 'First project ' was successfully created.
 
+# Positive Tests
+
+Create Blank Project
+	- Navigate To New Project Page
+	- Select Create Blank Project
+	- Input Project Name Project_Name
+	- Click Create Project
+	- Verify Message Showing Project Was Created
+	- Verify New Blank Project Exists With Name Project_Name
+
+Update Blank Project Name
+	- Navigate To Projects Page
+	- Select Blank Project
+	- Open Settings
+	- Select General
+	- Input Project Name Updated_Name
+	- Click Save Changes
+	- Verify Message Showing Project Was Successfully Updated
+	- Verify Projects Name Has Changed To Updated_Name
+
+Delete Blank Project
+	- Navigate To Projects Page
+	- Select Blank Project
+	- Open Settings
+	- Select General
+	- Open Advanced Settings
+	- Select Delete Project
+	- Input Given Confirmation Code
+	- Click Delete Project
+	- Verify Project No Longer Exists 
+
+Create Template Project
+	- Navigate To New Project Page
+	- Select Create From Template
+	- Select A Template
+	- Input Project Name Project_Name
+	- Verify Message Showing Project Was Created
+	- Verify New Template Project Exists With Name Project_Name
+
 # Negative Test examples are below write test process steps for each below test case
 
 	Create a blank project with the previous same name
 
+# Negative Tests
 
+Create A Blank Project With Same Name As Template Project
+	- Navigate To New Project Page
+	- Select Create Blank Project
+	- Input Project Name Project_Name
+	- Click Create Project
+	- Verify Error Showing Project Name Has Already Being Taken
+
+Create A Blank Project With Invalid slug
+	- Navigate To New Project Page
+	- Select Create Blank Project
+	- Input Project Name Project_Name
+	- Input Project Slug Invalid_Slug
+	- Click Create Project
+	- Verify Error Showing Project Slug Is Not Valid
+
+Update Project With Invalid Slug
+	- Navigate To Projects Page
+	- Select Template Project
+	- Open Settings
+	- Select General
+	- Input Project Slug Invalid_Slug
+	- Click Save Changes
+	- Verify Error Showing Project Slug Is Not Valid
+
+Delete Project With Invalid Confirmation Code
+	- Navigate To Projects Page
+	- Select Blank Project
+	- Open Settings
+	- Select General
+	- Open Advanced Settings
+	- Click Delete Project
+	- Input Confirmation Code Incorrect_Confirmation
+	- Verify Delete Project Button Cannot Be Clicked
+
+Delete Project Without Required Rights
+	(I don't have a project like this at hand but it might go something like this)
+	- Navigate To Projects Page
+	- Select Project Owned By Another Account
+	- Open Settings
+	- Select General
+	- Open Advanced Settings
+	- Select Delete Project
+	- Verify Error Showing You Don't Have The Rights To Delete The Project
