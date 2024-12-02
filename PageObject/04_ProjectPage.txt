@@ -43,7 +43,8 @@ Incorrect_Confirmation = incorrect
 # Positive Tests
 
 Create Blank Project
-	- Navigate To New Project Page
+	- Navigate To Project Page
+	- Click New Project
 	- Select Create Blank Project
 	- Input Project Name Project_Name
 	- Click Create Project
@@ -72,7 +73,8 @@ Delete Blank Project
 	- Verify Project No Longer Exists 
 
 Create Template Project
-	- Navigate To New Project Page
+	- Navigate To Project Page
+	- Click New Project
 	- Select Create From Template
 	- Select A Template
 	- Input Project Name Project_Name
@@ -86,14 +88,16 @@ Create Template Project
 # Negative Tests
 
 Create A Blank Project With Same Name As Template Project
-	- Navigate To New Project Page
+	- Navigate To Project Page
+	- Click New Project
 	- Select Create Blank Project
 	- Input Project Name Project_Name
 	- Click Create Project
 	- Verify Error Showing Project Name Has Already Being Taken
 
 Create A Blank Project With Invalid slug
-	- Navigate To New Project Page
+	- Navigate To Project Page
+	- Click New Project
 	- Select Create Blank Project
 	- Input Project Name Project_Name
 	- Input Project Slug Invalid_Slug

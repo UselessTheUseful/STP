@@ -6,7 +6,7 @@
 ## Steps to reproduce     
 
    - Navigate To Projects Page
-   - Click Create Project
+   - Click New Project
 
 ## What is the current bug behavior?
 
