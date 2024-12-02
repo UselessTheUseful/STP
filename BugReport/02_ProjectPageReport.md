@@ -30,4 +30,4 @@
 
 ## Priority
 
-    Major.  The Spelling mistake completeley changes the meaning of the title from what is intended. A severe spelling mistake in such an obvious place hurts our credibility with customers.
+    Major.  The Spelling mistake completeley changes the meaning of the title from what is intended. A severe spelling mistake in such an obvious place hurts credibility with customers.
