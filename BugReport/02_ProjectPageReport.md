@@ -18,7 +18,7 @@
      
 ## Relevant logs and/or screenshots
 
-![Image info](../Image/Bug_Screenshot.png)
+![Image info](../Image/Bug_Project_create_blank.png)
 
 ## Possible fixes
 
